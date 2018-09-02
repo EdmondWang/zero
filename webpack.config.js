@@ -63,5 +63,8 @@ module.exports = {
   plugins: [
     // make sure to include the plugin for the magic
     new VueLoaderPlugin()
-  ]
+  ],
+  optimization: {
+    minimize: true
+  }
 };
