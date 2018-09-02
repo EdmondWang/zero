@@ -84,7 +84,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" type="text/scss">
+$primary-color: hsla(203, 100%, 45%, 1);
+
 * {
   box-sizing: border-box;
 }
@@ -138,38 +140,47 @@ nav {
   z-index: 999999999;
 }
 
-nav ul {
-  display: flex;
-  flex-wrap: nowrap;
-}
+nav {
+  
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 
-nav li.router-link-active>a {
-  color: hsla(23, 100%, 45%, 1);
-}
+  li.router-link-active>a {
+    color: hsla(23, 100%, 45%, 1);
+  }
 
-nav>ul {
-  flex-direction: row;
-  justify-content: flex-start;
-}
+  >ul {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  >ul{
 
-nav>ul>li {
-  padding: 0.6rem;
-}
+    >li {
+      padding: 0.6rem;
+    }
 
-nav>ul>li>ul {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  background-color: #FFFFFF;
-}
+    >li:hover>ul {
+      display: flex;
+    }
 
-nav>ul>li:hover>ul {
-  display: flex;
-}
+    >li {
+      >ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #FFFFFF;
+      }
 
-nav>ul>li>ul>li {
-  border: 1px solid #cccccc;
-  padding: 0.6rem;
+      >ul>li {
+        border: 1px solid #cccccc;
+        padding: 0.6rem;
+      }
+    }
+
+  }
+
 }
 
 .module-wrapper {

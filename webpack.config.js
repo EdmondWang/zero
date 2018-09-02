@@ -22,21 +22,37 @@ module.exports = {
         use: ['vue-style-loader', 'css-loader']
       },
       {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
+      },
+      {
         test: /\.js$/,
         use: ['babel-loader'],
         exclude: /node_module/
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': ['vue-style-loader', 'css-loader', 'sass-loader']
+          }
+        }
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['*', '.js', '.vue', '.json'],
     alias: {
       vue$: 'vue/dist/vue.esm.js'
     }
+  },
+  performance: {
+    hints: false
   },
   plugins: [
     // make sure to include the plugin for the magic
