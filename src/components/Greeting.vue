@@ -10,6 +10,7 @@
       <li>Mocha + Chai</li>
       <li>Webpack</li>
       <li>VUE Server Side Rendering</li>
+      <li>CommonJS, AMC, CMD</li>
     </ol>
     <h2>Essential Links</h2>
     <ul>
