@@ -86,6 +86,7 @@ export default {
 
 <style lang="scss" type="text/scss">
 $primary-color: hsla(203, 100%, 45%, 1);
+$secondary-color: hsla(23, 100%, 45%, 1);
 
 * {
   box-sizing: border-box;
@@ -114,19 +115,19 @@ a {
 }
 
 a:link {
-  color: hsla(203, 100%, 45%, 1);
+  color: $primary-color;
 }
 
 a:visited {
-  color: hsla(203, 100%, 45%, 1);
+  color: $primary-color;
 }
 
 a:hover {
-  color: hsla(23, 100%, 45%, 1);
+  color: $secondary-color;
 }
 
 a:active {
-  color: hsla(23, 100%, 45%, 1);
+  color: $primary-color;
 }
 
 nav {
@@ -148,7 +149,7 @@ nav {
   }
 
   li.router-link-active>a {
-    color: hsla(23, 100%, 45%, 1);
+    color: $secondary-color;
   }
 
   >ul {
@@ -212,7 +213,7 @@ nav {
 
 .btn-primary {
   color: #ffffff;
-  background-color: hsla(203, 100%, 45%, 1);
+  background-color: $primary-color;
   border: 1px solid hsla(203, 100%, 60%, 1);
 }
 
@@ -221,10 +222,10 @@ nav {
 }
 
 .btn-primary:active {
-  background-color: hsla(23, 100%, 45%, 1);
+  background-color: $primary-color;
 }
 
 .text-primary {
-  color: hsla(203, 100%, 45%, 1);
+  color: $primary-color;
 }
 </style>

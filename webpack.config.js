@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
@@ -18,18 +17,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader']
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ],
-      },
-      {
         test: /\.js$/,
         use: ['babel-loader'],
         exclude: /node_module/
@@ -42,6 +29,25 @@ module.exports = {
             'scss': ['vue-style-loader', 'css-loader', 'sass-loader']
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: ['vue-style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]?[hash]'
+        }
       }
     ]
   },
@@ -52,7 +58,7 @@ module.exports = {
     }
   },
   performance: {
-    hints: false
+    hints: 'warning'
   },
   plugins: [
     // make sure to include the plugin for the magic
