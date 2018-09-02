@@ -1,7 +1,6 @@
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
-import { mutations } from '../../modules/general.js';
-import { MU_INCREASE, AC_INCREASE } from '../../modules/general.js';
+import { MU_INCREASE, AC_INCREASE } from '../../src/vuex/modules/general.js';
 
 describe('Increase Count', () => {
   it('INCREMENT', () => {
