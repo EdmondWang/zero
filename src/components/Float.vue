@@ -17,9 +17,14 @@ export default {
 }
 </script>
 <style scoped>
+.panel {
+  padding: 1rem;
+}
+
 .panel::after {
   content: ' ';
   clear: both;
+  display: block;
 }
 
 .float-left {
