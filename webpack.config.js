@@ -1,14 +1,14 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/main.js', // 项目的入口文件，webpack会从main.js开始，把所有依赖的js都加载打包
+  entry: './src/main.js', // entry point
   output: {
-    path: path.resolve(__dirname, './dist'), // 项目的打包文件路径
-    publicPath: '/dist/', // 通过devServer访问路径
-    filename: 'bundle.js' // 打包后的文件名
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/zero/dist/', // path through dev server
+    filename: 'bundle.js'
   },
   devServer: {
     historyApiFallback: true,
@@ -26,7 +26,7 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
-            'scss': ['vue-style-loader', 'css-loader', 'sass-loader']
+            scss: ['vue-style-loader', 'css-loader', 'sass-loader']
           }
         }
       },
@@ -36,11 +36,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ],
+        use: ['vue-style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
