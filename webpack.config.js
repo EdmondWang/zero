@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/main.js', // entry point
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/zero/dist/', // path through dev server
+    publicPath: '/tricky-storm/dist/', // path through dev server
     filename: 'bundle.js'
   },
   devServer: {

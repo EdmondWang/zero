@@ -78,8 +78,6 @@
 export default {
   name: 'App',
   created() {
-    debugger;
-    this;
   }
 };
 </script>
@@ -142,7 +140,7 @@ nav {
 }
 
 nav {
-  
+
   ul {
     display: flex;
     flex-wrap: nowrap;
