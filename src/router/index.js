@@ -119,6 +119,7 @@ const routes = [
 ];
 
 export default new Router({
+  base: 'tricky-storm',
   mode: 'history',
   routes: routes
 });
