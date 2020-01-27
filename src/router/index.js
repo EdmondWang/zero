@@ -13,6 +13,7 @@ import HSLA from '../components/HSLA.vue';
 import PseudoClass from '../components/PseudoClass.vue';
 import PseudoElement from '../components/PseudoElement.vue';
 import BoxShadow from '../components/BoxShadow.vue';
+import BorderRadius from '../components/BorderRadius.vue';
 import Sticky from '../components/Sticky.vue';
 import Center from '../components/Center.vue';
 import Display from '../components/Display.vue';
@@ -89,6 +90,10 @@ const routes = [
       {
         path: 'pseudo/element',
         component: PseudoElement
+      },
+      {
+        path: 'border-radius',
+        component: BorderRadius
       },
       {
         path: 'box-shadow',

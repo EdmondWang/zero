@@ -51,6 +51,9 @@
             <router-link tag="li" to="/css/box-shadow">
               <a href="#">Box Shadow</a>
             </router-link>
+            <router-link tag="li" to="/css/border-radius">
+              <a href="#">Border Radius</a>
+            </router-link>
             <router-link tag="li" to="/css/center">
               <a href="#">Center</a>
             </router-link>
